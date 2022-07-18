@@ -1,8 +1,8 @@
 <!--
- * @Author: suo
- * @Date: 2020-08-12 18:31:29
- * @LastEditTime: 2020-08-21 11:27:35
- * @LastEditors: suo
+ * @Author:  hkc
+ * @Date: 2022-07-12 
+ * @LastEditTime: 2022-07-12
+ * @LastEditors: hkc
  * @Description: 
 -->
 <!DOCTYPE html>
@@ -18,8 +18,8 @@
 	<script src="../dist/itools.js"></script>
 	<script>
 		// cookie
-		iTools.cookie.set('name1', 'shb', 3600)
-		iTools.cookie.set('name', 'shb', 3600)
+		iTools.cookie.set('name1', 'hkc', 3600)
+		iTools.cookie.set('name', 'abc', 3600)
 		let name = iTools.cookie.get('name1')
 		console.log(name)
 		// iTools.cookie.del('name')
@@ -34,7 +34,7 @@
 		// iTools.download(filename, filePath)
 		// getParam
 		let name2 = iTools.getParam('name')
-		let age = iTools.getParam('age', 'https://suohb.com?age=18')
+		let age = iTools.getParam('age', 'https://abc.com?age=18')
 		console.log(name2, age)
 		// randomStr
 		let str = iTools.randomStr(10)

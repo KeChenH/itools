@@ -11,12 +11,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/shb190802/itools.git"
+		"url": "git+https://github.com/KeChenH/itools.git"
 	},
 	"bugs": {
-		"url": "https://github.com/shb190802/itools/issues"
+		"url": "https://github.com/KeChenH/itools/issues"
 	},
-	"homepage": "https://github.com/shb190802/itools#readme",
+	"homepage": "https://github.com/KeChenH/itools#readme",
 	"keywords": [
 		"clone",
 		"cloneDeep",
@@ -36,8 +36,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"rollup-plugin-terser": "^7.0.0",
-		"@babel/core": "^7.8.3",
-		"@babel/preset-env": "^7.8.3",
+		"@babel/core": "^7.8.4",
+		"@babel/preset-env": "^7.8.4",
 		"rollup-plugin-babel": "^4.3.3"
 	}
 }

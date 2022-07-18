@@ -12,12 +12,10 @@ size < 3K
 npm i -S itools.js
 ```
 
-
-
 ## Usage
 
 ```javascript
-// esm 
+// esm
 import iTools from 'itools.js'
 // vue
 Vue.prototype.$tools = iTools
@@ -29,11 +27,9 @@ const iTools = require('itools.js')
 <script src='dist/itools.js'></script>
 ```
 
-
-
 ## API
 
-* clone 
+- clone
 
   对象深拷贝
 
@@ -42,28 +38,28 @@ const iTools = require('itools.js')
   let obj_b = iTools.clone(obj_a) // cloneDeep
   ```
 
-* cookie
+- cookie
 
   cookie 操作
 
   ```javascript
-  iTools.cookie.set('name','value','exSeconds','path')
+  iTools.cookie.set('name', 'value', 'exSeconds', 'path')
   let name = iTools.cookie.get('name')
   iTools.cookie.del('name')
   ```
 
-* copy
+- copy
 
   复制一个字符串到剪贴板
-  
+
   ```javascript
-	let str = 'copy str'
-  if(iTools.copy(str)){
-      alert('copy success')
+  let str = 'copy str'
+  if (iTools.copy(str)) {
+    alert('copy success')
   }
   ```
-  
-* download
+
+- download
 
   保存一个路径到本地并重命名
 
@@ -73,27 +69,27 @@ const iTools = require('itools.js')
   iTools.download(filename, filePath)
   ```
 
-* getParam
+- getParam
 
   获取浏览器地址栏中的参数
 
   ```javascript
   let name = iTools.getParam('name')
-  let age = iTools.getParam('age', 'https://suohb.com?age=18')
+  let age = iTools.getParam('age', 'https://abc.com?age=18')
   ```
-  
-* randomStr
+
+- randomStr
 
   获取固定长度的随机字符串
 
   ```javascript
-  let str = iTools.randomStr(10) // 
-  let str2 = iTools.randomStr(9,'letter') // only letter
-  let str3 = iTools.randomStr(8,'number') // only number
+  let str = iTools.randomStr(10) //
+  let str2 = iTools.randomStr(9, 'letter') // only letter
+  let str3 = iTools.randomStr(8, 'number') // only number
   console.log(str, str2, str3) // lq3hc8ogxl carijlvjz 83568934
   ```
 
-* type
+- type
 
   判断变量类型
 
@@ -103,63 +99,62 @@ const iTools = require('itools.js')
   console.log(iTools.type(true)) // boolean
   console.log(iTools.type(null)) // null
   console.log(iTools.type([1, 2, 3])) // array
-  console.log(iTools.type(() => { })) // function
+  console.log(iTools.type(() => {})) // function
   console.log(iTools.type({ a: 1 })) // object
   console.log(iTools.type(new Date())) // date
   console.log(iTools.type(undefined)) // undefined
   ```
 
-* uniqueId
+- uniqueId
 
-  获取唯一ID
+  获取唯一 ID
 
   ```javascript
   console.log(iTools.uniqueId()) // kdqsnvmi_zri604sxb89
   ```
 
-* debounce & throttle
+- debounce & throttle
 
   防抖和节流函数
 
   ```javascript
-	function logPos(e) {
-		console.log(e.pageX, e.pageY)
-	}
-	// debounce
-	// document.addEventListener('mousemove', iTools.debounce(logPos, 500))
-	// throttle
-	document.addEventListener('mousemove', iTools.throttle(logPos, 500))
+  function logPos(e) {
+    console.log(e.pageX, e.pageY)
+  }
+  // debounce
+  // document.addEventListener('mousemove', iTools.debounce(logPos, 500))
+  // throttle
+  document.addEventListener('mousemove', iTools.throttle(logPos, 500))
   ```
-* trim
 
-	针对 string、array、object格式，深度trim
+- trim
 
-	```javascript
-	let str4 = ' aa '
-	let arr = [' aa ', ' bb ']
-	let obj = { a: ' aa ', b: [' bb  '] }
-	console.log(iTools.trim(str4)) // aa
-	console.log(iTools.trim(arr)) // ['aa','bb']
-	console.log(iTools.trim(obj)) // {a:'aa',b:['bb']}
-	```
-  
-* once
+  针对 string、array、object 格式，深度 trim
 
-	方法仅执行一次
+  ```javascript
+  let str4 = ' aa '
+  let arr = [' aa ', ' bb ']
+  let obj = { a: ' aa ', b: [' bb  '] }
+  console.log(iTools.trim(str4)) // aa
+  console.log(iTools.trim(arr)) // ['aa','bb']
+  console.log(iTools.trim(obj)) // {a:'aa',b:['bb']}
+  ```
 
-	```javascript
-		let objOnce = {
-			name: 'once',
-			getName(value) {
-				console.log(this.name, value)
-			}
-		}
-		let objOnce2 = {
-			name: 'once2'
-		}
-		let onceFn = iTools.once(objOnce.getName, objOnce2)
-		onceFn(1) // once2 1
-		onceFn(2)
-	```
-  
+- once
 
+  方法仅执行一次
+
+  ```javascript
+  let objOnce = {
+    name: 'once',
+    getName(value) {
+      console.log(this.name, value)
+    },
+  }
+  let objOnce2 = {
+    name: 'once2',
+  }
+  let onceFn = iTools.once(objOnce.getName, objOnce2)
+  onceFn(1) // once2 1
+  onceFn(2)
+  ```
